@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cards Test</title>
+    <title>Game Test</title>
+    <link rel="stylesheet" href="images/cards.css" />
+    <script type="text/javascript" src="lib/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="src/cards.js"></script>
     <script type="text/javascript">
-        console.log(Cards);
-        Cards.deck.shuffle();
-        console.log(Cards);
+        var cardSheet;
+
+        $("document").ready(function () {
+            adjustFormFactor();
+            init();
+        });
+
+        function adjustFormFactor() {
+            document.getElementsByTagName("body")[0].style.height = (screen.availHeight - 150) + "px";
+        }
+
+        function init() {
+            Game.init();
+            var me = Game.players[0];
+            var myCards = me.cards();
+            console.log(myCards.join(","));
+            cardSheet = new Image();
+            cardSheet.src = "images/cards.png";
+
+            cardSheet.onload = function(){
+                //drawCardsOnScreen(myCards);
+                drawCardsOnScreen(["HA", "SA", "CA"]);
+            }
+        }
+
+        function drawCardsOnScreen(cards){
+            console.log("Card Sheet Loaded!")
+            var cardArray = new Array();
+            var maxAngle = 30;
+            for(var i = 0 ; i < cards.length; i++)
+            {
+                var n = cards.length -1;
+                var card = (drawCard(cards[i]));
+                var deg = ((2 * maxAngle) / n) * (i) - maxAngle;
+                //deg = maxAngle;
+                var pos = 10*i;
+                pos = 0;
+                var originX = ((-100 * i)/n) + 100;
+                originX = 0;
+                console.log($("#"+card.getAttribute("id")).css("-webkit-transform-origin","").css("-webkit-transform","rotate("+deg+"deg)").css("left",pos + "px"));
+            }
+
+        }
+
+        function drawCard(cardName) {
+            cardName = cardName.toLowerCase();
+            //SAMPLE <i class="sprite sprite-sx"></i>
+            var cardDiv = document.createElement("i");
+            cardDiv.id = cardName;
+            cardDiv.className = "sprite sprite-" + cardName;
+            document.getElementById("mycards").appendChild(cardDiv);
+            return document.getElementById(cardName);
+        }
+
     </script>
 </head>
 <body>
-<button onclick="init()">Init</button>
+<div id="mycards">
+    <div></div>
+</div>
 </body>
 </html>

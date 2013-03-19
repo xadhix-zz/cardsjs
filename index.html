@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Game Test</title>
-    <link rel="stylesheet" href="images/cards.css" />
+    <link rel="stylesheet" href="images/cards.css"/>
     <script type="text/javascript" src="lib/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="src/cards.js"></script>
     <script type="text/javascript">
@@ -25,29 +25,38 @@
             cardSheet = new Image();
             cardSheet.src = "images/cards.png";
 
-            cardSheet.onload = function(){
-                //drawCardsOnScreen(myCards);
-                drawCardsOnScreen(["HA", "SA", "CA"]);
-            }
+            cardSheet.onload = function () {
+                drawCardsOnScreen(Game.players[0].cards());
+            };
+            window.onresize = function () {
+                drawCardsOnScreen(Game.players[0].cards());
+            };
         }
 
-        function drawCardsOnScreen(cards){
-            console.log("Card Sheet Loaded!")
-            var cardArray = new Array();
-            var maxAngle = 30;
-            for(var i = 0 ; i < cards.length; i++)
-            {
-                var n = cards.length -1;
+        function drawCardsOnScreen(cards) {
+            $("#mycards").html("");
+            var cardArray = [];
+            var maxAngle = 90;
+            var startAngle = 45;
+            for (var i = 0; i < cards.length; i++) {
                 var card = (drawCard(cards[i]));
-                var deg = ((2 * maxAngle) / n) * (i) - maxAngle;
-                //deg = maxAngle;
-                var pos = 10*i;
-                pos = 0;
-                var originX = ((-100 * i)/n) + 100;
-                originX = 0;
-                console.log($("#"+card.getAttribute("id")).css("-webkit-transform-origin","").css("-webkit-transform","rotate("+deg+"deg)").css("left",pos + "px"));
+                var pos = 20 * i;
+                $("#" + card.getAttribute("id")).css({"position":"absolute", "left":pos + "px", "top":"60%"});
+                cardArray.push(card);
             }
-
+            var startPosition = $("#" + cardArray[0].getAttribute("id")).position().left;
+            var endPosition = $("#" + cardArray[cardArray.length - 1].getAttribute("id")).position().left + $("#" + cardArray[cardArray.length - 1].getAttribute("id")).width();
+            var myCardsWidth = endPosition - startPosition;
+            var availableWidth = $("#mycards").width();
+            var leftRightPadding = (availableWidth - myCardsWidth) / 2;
+            leftRightPadding = (leftRightPadding / availableWidth) * 100;
+            var prevLeft = 0;
+            for (i = 0; i < cardArray.length; i++) {
+                var curLeft = $("#" + cardArray[i].getAttribute("id")).position().left;
+                var left = (curLeft / availableWidth) * 100;
+                curLeft = (left + leftRightPadding);
+                $("#" + cardArray[i].getAttribute("id")).css("left", curLeft + "%");
+            }
         }
 
         function drawCard(cardName) {
@@ -60,11 +69,10 @@
             return document.getElementById(cardName);
         }
 
+
     </script>
 </head>
 <body>
-<div id="mycards">
-    <div></div>
-</div>
+<div id="mycards"></div>
 </body>
 </html>

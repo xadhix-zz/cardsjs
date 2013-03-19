@@ -1,11 +1,9 @@
 #mycards {
-    padding:100px;
 }
 
 .sprite {
     background: url('cards.png') no-repeat;
     display: inline-block;
-    position:absolute;
 }
 
 .sprite-dx {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38597111-9d50-488a-a10b-f8592895bb83" name="Default" comment="">
+    <list default="true" id="38597111-9d50-488a-a10b-f8592895bb83" name="Default" comment="Added Deck function and shuffle.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/cards.css" afterPath="$PROJECT_DIR$/images/cards.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src-test/cards-test.js" afterPath="$PROJECT_DIR$/src-test/cards-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cards.js" afterPath="$PROJECT_DIR$/src/cards.js" />
     </list>
     <ignored path="cardsjs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,8 +17,8 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/cardsjs$Basic_Checks.coverage" NAME="Basic Checks Coverage Results" MODIFIED="1363427031949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cardsjs$cards_test_js.coverage" NAME="cards-test.js Coverage Results" MODIFIED="1363698909957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cardsjs$All_in_cardsjs.coverage" NAME="All in cardsjs Coverage Results" MODIFIED="1363418416147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/cardsjs$cards_test_js.coverage" NAME="cards-test.js Coverage Results" MODIFIED="1363428732505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -39,19 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/cards.css">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="22" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+            <state line="40" column="21" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.33202356">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="cards.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/cards.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="45" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.24861878">
+            <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,6 +81,7 @@
         <option value="localhost:9876/static/runner.js" />
         <option value="$PROJECT_DIR$/src-test/cards-test.js" />
         <option value="$PROJECT_DIR$/src/cards.js" />
+        <option value="localhost:9876/static/lib/jquery-min.js" />
         <option value="$PROJECT_DIR$/images/cards.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
@@ -118,9 +119,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Tests" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,6 +185,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Tests" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,7 +207,7 @@
       <recent name="C:\Users\I069162\Documents\GitHub\cardsjs\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JsTestDriver.Check Player.Basic checks">
+  <component name="RunManager" selected="JsTestDriver.cards-test.js">
     <configuration default="false" name="Check Deck" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" singleton="true" temporary="true">
       <setting name="configLocationType" value="TEST_CASE" />
       <setting name="configType" value="FILE_PATH" />
@@ -299,8 +300,10 @@
       <setting name="preferredDebugBrowser" value="CHROME" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
       <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
       <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
       <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
       <method />
     </configuration>
     <configuration default="false" name="index.html" type="JavascriptDebugSession" factoryName="Local">
@@ -373,22 +376,22 @@
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32195678" sideWeight="0.3405377" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992035" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5904437" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32195678" sideWeight="0.33579335" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.49786553" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986821" sideWeight="0.4960091" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.526621" sideWeight="0.67804325" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39817974" sideWeight="0.48132336" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15154749" sideWeight="0.67007965" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39817974" sideWeight="0.47917765" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986821" sideWeight="0.5005701" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32195678" sideWeight="0.65577227" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4095563" sideWeight="0.65688366" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41811848" sideWeight="0.339381" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32195678" sideWeight="0.6589352" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4095563" sideWeight="0.6515475" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4095563" sideWeight="0.34471717" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.49573106" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992035" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67007965" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67007965" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -456,18 +459,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src-test/cards-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cards.js">
@@ -479,9 +473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src-test/cards-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -507,9 +499,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src-test/cards-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cards.jstd">
@@ -534,7 +524,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src-test/cards-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="13" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0">
+        <state line="73" column="13" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="http://localhost:9876/static/lib/jquery-min.js">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/cards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -546,16 +546,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/cards.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.24861878">
+        <state line="40" column="21" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.33202356">
           <folding />
         </state>
       </provider>
